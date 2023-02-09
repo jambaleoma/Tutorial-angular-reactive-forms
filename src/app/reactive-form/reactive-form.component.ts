@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -50,8 +49,7 @@ export class ReactiveFormComponent {
   public myInputDebounceDistinct = new FormControl()
 
   constructor(
-    private router: Router,
-    private httpClient: HttpClient
+    private router: Router
   ) {
     // INPUT
     this.myInput.valueChanges
