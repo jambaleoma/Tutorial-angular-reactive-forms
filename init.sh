@@ -1,0 +1,1 @@
+npx -p @angular/cli@latest ng new angular-reactive-forms -s -t -S
