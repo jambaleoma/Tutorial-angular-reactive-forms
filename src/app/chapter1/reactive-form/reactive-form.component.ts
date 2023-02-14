@@ -29,16 +29,6 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs';
         </div>
       </div>
   </div>
-
-  <footer class="text-center text-lg-start fixed-bottom">
-    <div class="text-center p-3">
-      <button type="button" class="btn btn-primary p-2 m-2" (click)="goTo('reactive/weatherAPI')">Weather API</button>
-      <button type="button" class="btn btn-primary p-2" (click)="goTo('reactive/pipeAsync')">Pipe Async</button>
-    </div>
-    <div class="text-center p-3">
-      <button type="button" class="btn btn-primary p-2" (click)="goTo('home')">Home</button>
-    </div>
-  </footer>
   `,
   styles: [
   ]

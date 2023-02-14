@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClassicFormComponent } from './classic-form/classic-form.component';
 import { HomeComponent } from './home/home.component';
-import { PipeAsyncComponent } from './reactive-form/pipe-async/pipe-async.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { WeatherAPIFormComponent } from './reactive-form/weather-apiform/weather-apiform.component';
+import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent,},
-  { path: 'classic', component: ClassicFormComponent, data: {'form': 'classic'} },
-  { path: 'reactive', component: ReactiveFormComponent, data: {'form': 'reactive'} },
-  { path: 'reactive/weatherAPI', component: WeatherAPIFormComponent, data: {'form': 'reactive'} },
-  { path: 'reactive/pipeAsync', component: PipeAsyncComponent, data: {'form': 'reactive'} },
-  { path: '**', redirectTo: 'home'}
+  { path: 'chapter1', loadChildren:() => import ('./chapter1/chapter1.module').then(m => m.Chapter1Module) },
+  { path: 'chapter2', loadChildren:() => import ('./chapter2/chapter2.module').then(m => m.Chapter2Module) },
+  { path: 'chapter3', loadChildren:() => import ('./chapter3/chapter3.module').then(m => m.Chapter3Module) },
+  { path: 'chapter4', loadChildren:() => import ('./chapter4/chapter4.module').then(m => m.Chapter4Module) },
+  { path: '**', component: Page404Component }
 ];
 
 @NgModule({

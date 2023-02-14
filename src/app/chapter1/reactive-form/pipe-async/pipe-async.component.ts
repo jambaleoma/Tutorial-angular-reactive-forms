@@ -48,15 +48,6 @@ import { WeatherService } from 'src/app/services/weather.service';
       <img [src]="'https://api.openweathermap.org/img/w/' + meteoFromService.weather[0].icon + '.png'" alt="icon">
     </div>
   </div>
-
-  <footer class="text-center text-lg-start fixed-bottom">
-    <div class="text-center p-3">
-      <button type="button" class="btn btn-primary p-2" (click)="goTo('home')">HOME</button>
-    </div>
-    <div class="text-center p-3">
-      <button type="button" class="btn btn-primary p-2" (click)="goTo('reactive')">Reactive Form</button>
-    </div>
-  </footer>
   `,
   styles: [
   ]
